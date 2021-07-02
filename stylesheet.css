@@ -1,0 +1,31 @@
+.clock {  
+  margin-top: 9px;  
+}
+
+.clockbox{
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.clockbox:hover {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);  
+}
+
+.status-icon {
+  margin: 2px;         
+}
+
+.status {    
+  margin-top: 10px;
+  margin-bottom: 28px;   
+}
+
+.status:hover {
+  border-radius: 10px;   
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+

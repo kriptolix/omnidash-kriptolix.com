@@ -1,0 +1,8 @@
+{
+	"name": "Omnidash",
+	"description": "Show dash outside of activites",
+	"shell-version": ["40"],
+	"url": "",
+	"uuid": "omnidash@kriptolix.com",
+	"version": 1
+}

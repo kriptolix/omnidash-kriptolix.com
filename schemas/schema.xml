@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.omnidash@kriptolix.com" path="/org/gnome/shell/extensions/omnidash@kriptolix.com/">
+    <!-- See also: https://developer.gnome.org/glib/stable/gvariant-format-strings.html -->
+    <key name="show-out-overview" type="b">
+      <default>true</default>
+      <summary>summary</summary>
+      <description>description</description>
+    </key>
+    <key name="dash-size" type="i">
+      <default>48</default>
+      <summary>summary</summary>
+      <description>description</description>
+    </key>
+    <key name="hide-delay" type="i">
+      <default>2000</default>
+      <summary>summary</summary>
+      <description>description</description>
+    </key>
+     <key name="animation-time" type="i">
+      <default>750</default>
+      <summary>summary</summary>
+      <description>description</description>
+    </key>
+    <key name="animation-delay" type="i">
+      <default>250</default>
+      <summary>summary</summary>
+      <description>description</description>
+    </key>
+  </schema>
+</schemalist>
