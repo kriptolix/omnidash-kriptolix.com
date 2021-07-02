@@ -1,5 +1,5 @@
 # Omnidash
-![gif](./medias/02-07-2021.gif)
+![gif](./media/02-07-2021.gif)
 
 
 
