@@ -229,7 +229,7 @@ class OmniDash extends Dash.Dash {
             // or hidden
             //if (Main.overview.visible && !Main.overview.animationInProgress) 
 
-            if (!Main.overview.animationInProgress || this._dockState.HIDDEN || this._dockState.HIDDING)
+            if (!Main.overview.animationInProgress || this.dockState.HIDDEN || this.dockState.HIDDING)
                 item.animateOutAndDestroy();
             else
                 item.destroy();
