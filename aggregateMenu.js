@@ -9,14 +9,14 @@ var FormatStatus = class {
         this.aggregateMenu = Main.panel.statusArea['aggregateMenu'];
 
         Main.panel._rightBox.remove_actor(this.aggregateMenu.container);
-    
-        this.aggregateMenu._indicators.remove_all_children();
-       
-        this.aggregateMenu._indicators.set_vertical(true);
-        this.aggregateMenu.set_y_expand(false);
-        this.aggregateMenu.set_size((this.dash.iconSize / 2) +14, this.dash.iconSize +14);
+
+        this.aggregateMenu._indicators.remove_all_children();       
+        this.aggregateMenu._indicators.set_vertical(true);        
         this.aggregateMenu._indicators.set_x_align(Clutter.ActorAlign.CENTER);
-        this.aggregateMenu._indicators.set_y_align(Clutter.ActorAlign.CENTER);                
+        this.aggregateMenu._indicators.set_y_align(Clutter.ActorAlign.CENTER);
+
+        this.aggregateMenu.set_y_expand(false);
+        this.aggregateMenu.set_size((this.dash.iconSize / 2) +14, this.dash.iconSize +14);                
         this.aggregateMenu.add_style_class_name('status');        
 
         this._iconPower = new St.Icon({ icon_name: 'system-shutdown-symbolic',

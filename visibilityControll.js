@@ -27,7 +27,7 @@ class VisibilityManager extends Clutter.Actor {
 		this._monitor = Main.layoutManager.primaryMonitor;
         
         this._preventHide = false;
-        this.dockState = null
+        this.dockState = omnidash.dockState;
         this.hideDelay = 2000;                
         
 		this._threshold = 100;

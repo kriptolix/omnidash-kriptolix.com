@@ -3,13 +3,6 @@ const AppFavorites = imports.ui.appFavorites;
 const Main = imports.ui.main;
 const Dash = imports.ui.dash;
 
-var State = {
-    HIDDEN:  0,
-    SHOWING: 1,
-    SHOWN:   2,
-    HIDING:  3
-};
-
 var OmniDash = GObject.registerClass(
 class OmniDash extends Dash.Dash {
     _init() {
@@ -17,6 +10,7 @@ class OmniDash extends Dash.Dash {
         super._init();                           
 
         this.iconSize = 48;
+        this.dockState = null;
         this._showAppsIcon.icon.setIconSize(this.iconSize);
 
         print('OmniDash inited');
