@@ -42,12 +42,8 @@ var FormatStatus = class {
         this.aggregateMenu._indicators.remove_all_children();
         this._iconPower.destroy();
         this._iconVolume.destroy();
-        this.aggregateMenu.set_y_expand(true);
-        this.aggregateMenu._indicators.set_vertical(false);
-        
-        this.aggregateMenu.set_size(-1,-1);
-        this.aggregateMenu._indicators.set_x_align(Clutter.ActorAlign.FILL);
-        this.aggregateMenu._indicators.set_y_align(Clutter.ActorAlign.FILL);                
+        this.aggregateMenu.set_y_expand(true);        
+        this.aggregateMenu.set_size(-1,-1);                       
         this.aggregateMenu.remove_style_class_name('status');        
 
         this.aggregateMenu._indicators.add_child(this.aggregateMenu._remoteAccess);
@@ -61,6 +57,10 @@ var FormatStatus = class {
         this.aggregateMenu._indicators.add_child(this.aggregateMenu._rfkill);
         this.aggregateMenu._indicators.add_child(this.aggregateMenu._volume);
         this.aggregateMenu._indicators.add_child(this.aggregateMenu._power);
+
+        this.aggregateMenu._indicators.set_vertical(false);
+        this.aggregateMenu._indicators.set_x_align(Clutter.ActorAlign.FILL);
+        this.aggregateMenu._indicators.set_y_align(Clutter.ActorAlign.FILL);
 
         this.dash._dashContainer.remove_actor(this.aggregateMenu.container);
 

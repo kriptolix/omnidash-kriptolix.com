@@ -154,9 +154,16 @@ class VisibilityManager extends Clutter.Actor {
 
     _hideElements() {
 
-        //await OverviewControls.layout_manager.ensureAllocation();
-        Main.overview.dash.hide();
-        Main.overview.dash.width = 0;
+        this._dashId = GLib.timeout_add(
+            GLib.PRIORITY_DEFAULT, 2000, () => { 
+
+                if (Main.overview.dash){
+                   Main.overview.dash.hide();
+                   return GLib.SOURCE_REMOVE; 
+                }
+
+            });
+        
         Main.panel.hide();      
     }
    
