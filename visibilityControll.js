@@ -63,17 +63,17 @@ class VisibilityManager extends Clutter.Actor {
         });
 
         this.showingHandlerId = Main.overview.connect('showing', () => {            
-            if (this.dockState == State.HIDDEN || this.dockState == State.HIDDEN){
+            if (this.dockState == State.HIDDEN || this.dockState == State.HIDDING){
                 this._animateIn(150, 0);
             }
             this._preventHide = true;                           
         });
 
         this.showHandlerId = Main.overview.connect('show', () => {            
-            if (this.dockState == State.HIDDEN || this.dockState == State.HIDDEN){
+            if (this.dockState == State.HIDDEN || this.dockState == HIDDING){
                 this._animateIn(150, 0);
             }
-            /*this._preventHide = true;*/                           
+            this._preventHide = true;                           
         });
 
    
@@ -124,8 +124,8 @@ class VisibilityManager extends Clutter.Actor {
 
 
     _animateIn(time, delay) {
-        this.dash.show();
-        this.dockState = State.SHOWING;        
+        this.dockState = State.SHOWING;
+        this.dash.show();                
         this.dash.ease({
             translation_y: -(this.dash.iconSize + 70),
             duration: time,
@@ -176,8 +176,7 @@ class VisibilityManager extends Clutter.Actor {
         Main.overview.disconnect(this.showingHandlerId);
         Main.overview.disconnect(this.showHandlerId);
 
-        Main.overview.dash.show();
-        Main.overview.dash.setMaxSize(-1, -1);
+        Main.overview.dash.show();        
         Main.panel.show();
 
         print('Undo Manager Changes');        
